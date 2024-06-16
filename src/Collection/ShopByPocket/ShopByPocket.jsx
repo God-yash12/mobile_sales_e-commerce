@@ -61,9 +61,9 @@ const ShopByPocket = () => {
     }, []);
 
     return (
-        <div className="mx-3 mb-10 md:mb-20 mt-10">
+        <div className="mx-3 mb-10 md:mb-20 mt-16">
             <div className="container">
-            <div className="flex justify-center items-center gap-4 mb-20">
+            <div className="flex justify-center items-center gap-4 mb-16">
             <img src={Star} alt="" className='w-8 h-8 ' />
             <h1 className="text-3xl sm:lg md:2xl">
                 Shop By Pocket

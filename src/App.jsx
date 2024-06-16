@@ -9,8 +9,7 @@ import RefurbishLaptop from './Components/Refurbish_Laptop/RefurbishLaptop';
 import SPLCategory from './Components/SPL_Categories/SPLCategory';
 import Accessories from './Components/Accessories/Accessories';
 import Blog from './Components/Blog/Blog';
-import About from './Components/About/About';
-import ShopByPocket from './Collection/ShopByPocket/ShopByPocket';
+import Footer from "./Components/Footer/Footer"
 
 
 
@@ -27,7 +26,7 @@ const App = () => {
       <Route path="/accessories" element={<Accessories />} />
       <Route path="/blog" element={<Blog />} />
       </Routes>
-      
+      <Footer />
     </Router>
   )
 }

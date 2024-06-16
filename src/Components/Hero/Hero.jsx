@@ -13,6 +13,7 @@ import ShopByPocket from '../../Collection/ShopByPocket/ShopByPocket';
 import ShopByBrand from '../../Collection/ShopByBrand/ShopByBrand';
 import Reviews from "./Reviews/Reviews";
 import Condition from './Conditions/Condition';
+import FeatureOn from './FeatureOn/FeatureOn';
 
 const Hero = () => {
 
@@ -57,6 +58,7 @@ const Hero = () => {
         <ShopByBrand />
         <Reviews />
         <Condition />
+        <FeatureOn />
     </div>
   );
 };
