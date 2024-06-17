@@ -1,7 +1,7 @@
 
 import React from 'react';
 
-const RegisterPage = () => {
+const Register = () => {
   return (
     <div className="min-h-screen flex items-center justify-center">
       <div className="max-w-2xl w-full bg-white p-8 rounded-lg shadow-md">
@@ -70,4 +70,4 @@ const RegisterPage = () => {
   );
 }
 
-export default RegisterPage;
+export default Register;

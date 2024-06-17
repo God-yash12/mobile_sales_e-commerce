@@ -9,6 +9,10 @@ import RefurbishLaptop from './Components/Refurbish_Laptop/RefurbishLaptop';
 import SPLCategory from './Components/SPL_Categories/SPLCategory';
 import Accessories from './Components/Accessories/Accessories';
 import Blog from './Components/Blog/Blog';
+import Login from './Components/Auth/Login';
+import Register from './Components/Auth/Register';
+import ForgotPassword from './Components/Auth/ForgotPawwsord';
+import Footer from './Components/Footer/Footer'
 
 
 
@@ -26,8 +30,7 @@ const App = () => {
       <Route path="/blog" element={<Blog />} />
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
-      <Route path="/forgotpassword" element={<ForgotPassword />} />
-      <Route path="/dealsoftheday" element={<DealsofDay />} />
+      <Route path="/forgotPassword" element={<ForgotPassword />} />
       </Routes>
       <Footer />
     </Router>

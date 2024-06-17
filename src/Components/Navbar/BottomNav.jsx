@@ -83,8 +83,10 @@ const BottomNav = () => {
           <span className="absolute top-full mt-2 left-1/2 transform -translate-x-1/2 w-max p-1 text-xs z-[9999] bg-primary text-white rounded-md opacity-0 group-hover:opacity-100 transition-opacity">Search</span>
         </div>
         <div className="relative group hidden md:block">
+          <a href="./login">
           <MdAccountBox className="text-primary text-2xl" />
           <span className="absolute top-full mt-2 left-1/2 transform -translate-x-1/2 w-max p-1 text-xs z-[9999] bg-primary text-white rounded-md opacity-0 group-hover:opacity-100 transition-opacity">Account</span>
+          </a>
         </div>
         <div className="relative group">
           <FaShoppingBag className="text-primary text-2xl" />

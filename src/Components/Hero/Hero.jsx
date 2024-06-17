@@ -1,9 +1,5 @@
-<<<<<<< HEAD
 import React from 'react'
 import { Link } from 'react-router-dom'
-import DatailsoftheDay from './DealsoftheDay'
-=======
-import React from 'react';
 import Slider from "react-slick";
 import Banner1 from "../../assets/Hero/Banner1.png";
 import Banner2 from "../../assets/Hero/Banner2.png";
@@ -12,6 +8,7 @@ import Banner4 from "../../assets/Hero/Banner4.png";
 import Banner5 from "../../assets/Hero/Banner5.png";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import DatailsoftheDay from './DealsoftheDay'
 import Features from "./Features";
 import About from '../About/About';
 import ShopByPocket from '../../Collection/ShopByPocket/ShopByPocket';
@@ -19,7 +16,6 @@ import ShopByBrand from '../../Collection/ShopByBrand/ShopByBrand';
 import Reviews from "./Reviews/Reviews";
 import Condition from './Conditions/Condition';
 import FeatureOn from './FeatureOn/FeatureOn';
->>>>>>> 80697c522c531bb03c532ef9f246eff8a2077926
 
 const Hero = () => {
 
@@ -59,6 +55,7 @@ const Hero = () => {
         </Slider>
         </div>
         <Features />
+        <DatailsoftheDay />
         <About />
         <ShopByPocket />
         <ShopByBrand />

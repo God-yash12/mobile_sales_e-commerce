@@ -17,8 +17,10 @@ const Card = ({ product }) => {
       </div>
       <div className="mt-4 text-center md:text-left">
         <h3 className="text-lg font-bold">{product.name}</h3>
-        <p className="mt-2 text-gray-500">₹ {product.price}</p>
-        <p className="mt-2 line-through text-green-400">₹ {product.originalPrice}</p>
+        <div className="flex justify-center md:justify-start">
+          <p className="text-gray-500 mr-4">₹ {product.price}</p>
+          <p className="text-green-500 line-through">₹ {product.originalPrice}</p>
+        </div>
         <p className="mt-2 text-black-500">
           EMI starting from <span className="text-green-500">₹{product.emi}</span>/month
         </p>

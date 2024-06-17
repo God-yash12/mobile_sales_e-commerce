@@ -35,7 +35,7 @@ const data = [
     {
         id: 6,
         image: Feature4,
-        text: "Fast & Free Delivery",
+        text: "Quick Response",
     },
 ]
 

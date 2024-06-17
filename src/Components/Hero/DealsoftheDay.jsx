@@ -3,7 +3,7 @@ import Slider from 'react-slick';
 import Card from './Card';
 
 
-const ProductSlider = () => {
+const DealsoftheDay = () => {
   const [products] = useState([
     {
       id: 1,
@@ -103,6 +103,13 @@ const ProductSlider = () => {
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 4,
+    cssEase: 'ease-in-out',
+    pauseOnHover: true,
+    pauseOnFocus: true,
+    autoplay: true,
+    autoplaySpeed: 2950,
+    arrows: false,
+
     responsive: [
       {
         breakpoint: 1024,
@@ -141,7 +148,11 @@ const ProductSlider = () => {
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8">
-      <h2 className="text-4xl font-semibold mb-6 text-center">Deals of the Day</h2>
+      <div className="flex justify-center items-center gap-3 mb-16 pb-4">
+        <img src="/src/assets/star.png" alt="" className="w-8 h-8" />
+          <h2 className="text-3xl sm:lg md:2xl font-semibold text-center">Deals of the Day</h2>
+        <img src="/src/assets/star.png" alt="" className="w-8 h-8" />
+      </div>
       <Slider {...settings}>
         {products.map((product) => (
           <div key={product.id} className="px-2">
@@ -153,4 +164,4 @@ const ProductSlider = () => {
   );
 };
 
-export default ProductSlider;
+export default DealsoftheDay;
