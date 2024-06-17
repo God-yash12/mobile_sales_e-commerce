@@ -111,7 +111,7 @@ const BottomNav = () => {
               </a>
             </div>
             <div className="bottom-0 ml-2 w-60 bg-white flex justify-center shadow-md cursor-pointer rounded-md">
-              <a href="#" className="text-center text-xl text-black py-2">
+              <a href="/register" className="text-center text-xl text-black py-2">
                 Register
               </a>
             </div>
