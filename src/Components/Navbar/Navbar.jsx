@@ -1,10 +1,10 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useState, useEffect } from "react";
 import Slider from "react-slick";
 import Banner from "../../assets/Navbar/BannerTop.jpg";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import { FaFacebook, FaInstagram, FaYoutube, FaTiktok, FaHome, FaPhone } from "react-icons/fa";
-import Hero from '../Hero/Hero';
 import { Link } from 'react-router-dom';
 import BottomNav from './BottomNav'
 
@@ -87,7 +87,7 @@ const Navbar = () => {
       </div>
 
       {/* Middle Navbar */}
-      <div className={`bg-gray-300 px-4 py-2 flex justify-between items-center sm:flex transition-transform duration-300 ${showNavbar ? 'transform translate-y-0' : 'transform -translate-y-full'}`}>
+      <div className={`bg-gray-200 px-4 py-2 flex justify-between items-center sm:flex transition-transform duration-300 ${showNavbar ? 'transform translate-y-0' : 'transform -translate-y-full'}`}>
         {/* Social Icons */}
         <div className="flex gap-4 text-[15px] ml-4 sm:text-2xl md-text-xl justify-center">
           <a href="#"><FaFacebook className="text-blue-900 cursor-pointer" /></a>
@@ -108,7 +108,7 @@ const Navbar = () => {
 
         {/* Contact Info */}
         <div className="flex gap-2 ml-auto sm:mr-10">
-          <FaPhone className="text-xs sm:text-xl md:text-lg text-primary cursor-pointer" />
+          <FaPhone className="text-xs sm:text-xl md:text-lg text-primary cursor-pointer mt-1" />
           <p className="text-xs sm:text-xl md:text-lg text-primary">+977 9860603673</p>
         </div>
       </div>

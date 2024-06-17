@@ -8,10 +8,19 @@ const BottomNav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [currentSubMenu, setCurrentSubMenu] = useState(null);
   const sidebarRef = useRef(null);
-  const navLinksRef = useRef(null)
+  const navLinksRef = useRef(null);
 
-  const toggleSubMenu = (submenuId) =>{
-    setCurrentSubMenu(currentSubMenu === submenuId ? null : submenuId)
+  const toggleSubMenu = (event, submenuId) => {
+    event.preventDefault(); // Prevent the default anchor tag behavior
+    setCurrentSubMenu(currentSubMenu === submenuId ? null : submenuId);
+  };
+
+  const handleMouseEnter = (submenuId) => {
+    setCurrentSubMenu(submenuId);
+  };
+
+  const handleMouseLeave = () => {
+    setCurrentSubMenu(null);
   };
 
   const handleClickOutside = (event) => {
@@ -27,9 +36,8 @@ const BottomNav = () => {
     };
   }, []);
 
-
   return (
-    <div className="relative flex justify-between items-center bg-gray-400 p-4">
+    <div className="relative flex justify-between items-center bg-gray-100 p-4">
       {/* Logo section */}
       <div className="flex items-center ml-5 gap-4 h-6">
         <div className="text-primary text-2xl md:hidden cursor-pointer" onClick={() => setIsMenuOpen(!isMenuOpen)}>
@@ -43,14 +51,19 @@ const BottomNav = () => {
       <div className="flex justify-center flex-grow">
         <ul className="hidden md:flex items-center justify-around gap-4 text-sm lg:text-lg xl:text-xl" ref={navLinksRef}>
           {NavLinks.map((items, index) => (
-            <li key={index} className="relative text-blue-700 group" onMouseEnter={() => toggleSubMenu(items.id)} onMouseLeave={() => toggleSubMenu(null)}> 
-              <a href={items.link} className="flex items-center  justify-around cursor-pointer md:text-[18px]">
+            <li
+              key={index}
+              className="relative text-blue-700 group"
+              onMouseEnter={() => handleMouseEnter(items.id)}
+              onMouseLeave={handleMouseLeave}
+            > 
+              <a href={items.link} className="flex items-center justify-around cursor-pointer md:text-[18px] relative">
                 {items.title}
-                {items.dropdownIcon && <MdOutlineArrowDropDown className="text-2xl md:text-3xl group-hover:rotate-180 transition-all duration-300" />}
+                {items.dropdownIcon && <MdOutlineArrowDropDown className="text-2xl md:text-3xl group-hover:rotate-180 transition-all duration-1500 " />}
                 <div className="absolute left-0 bottom-0 bg-blue-500 h-[2px] w-0 group-hover:w-full transition-all duration-500"></div>
               </a>
-              {items.submenu && currentSubMenu ===items.id &&(
-                <ul className="absolute left-0 top-full mt-1 w-40 bg-white z-[999] shadow-lg rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-900">
+              {items.submenu && currentSubMenu === items.id && (
+                <ul className=" absolute mb-1 w-40 bg-white z-[999] shadow-lg rounded-lg opacity-100 transition-opacity duration-300">
                   {items.submenu.map((submenuItem, subIndex) => (
                     <li key={subIndex} className="border-b last:border-0">
                       <a href={submenuItem.link} className="block px-4 py-2 text-black hover:bg-gray-200">
@@ -64,32 +77,41 @@ const BottomNav = () => {
           ))}
         </ul>
       </div>
-      <div className=" flex items-center gap-7 ml-4 md:mr-2">
-        <FaSearch className="text-primary text-2xl" />
-        <MdAccountBox className="text-primary text-2xl hidden md:block" />
-        <FaShoppingBag className="text-primary text-2xl" />
+      <div className="flex items-center gap-7 ml-4 md:mr-2 cursor-pointer">
+        <div className="relative group">
+          <FaSearch className="text-primary text-2xl" />
+          <span className="absolute top-full mt-2 left-1/2 transform -translate-x-1/2 w-max p-1 text-xs z-[9999] bg-primary text-white rounded-md opacity-0 group-hover:opacity-100 transition-opacity">Search</span>
+        </div>
+        <div className="relative group hidden md:block">
+          <MdAccountBox className="text-primary text-2xl" />
+          <span className="absolute top-full mt-2 left-1/2 transform -translate-x-1/2 w-max p-1 text-xs z-[9999] bg-primary text-white rounded-md opacity-0 group-hover:opacity-100 transition-opacity">Account</span>
+        </div>
+        <div className="relative group">
+          <FaShoppingBag className="text-primary text-2xl" />
+          <span className="absolute top-full mt-2 left-1/2 transform -translate-x-1/2 w-max p-1 text-xs z-[9999] bg-primary text-white rounded-md opacity-0 group-hover:opacity-100 transition-opacity">Cart</span>
+        </div>
       </div>
       {/* Side Navbar */}
       <div className={`fixed top-0 left-0 w-64 h-full bg-gray-800 text-white z-[9999] transform ${isMenuOpen ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-300 ease-in-out`} ref={sidebarRef}>
         <div className="p-4">
           <div className="flex justify-between items-center">
-        <img src={Logo} alt="Logo" className="h-8 w-8 rounded-full md:block" />
+            <img src={Logo} alt="Logo" className="h-8 w-8 rounded-full md:block" />
             <h1 className="font-bold text-2xl">Mobile Hub</h1>
             <MdClose className="text-2xl cursor-pointer" onClick={() => setIsMenuOpen(false)} />
           </div>
           <ul className="mt-10">
             {NavLinks.map((items, index) => (
               <li key={index} className="text-[18px] text-white py-2 border-b border-gray-700">
-                <a href={items.link} className="flex items-center justify-between cursor-pointer" onClick={() => toggleSubMenu(items.id)}>
+                <a href={items.link} className="flex items-center justify-between cursor-pointer" onClick={(e) => toggleSubMenu(e, items.id)}>
                   {items.title}
-                  {items.arrowForward && <MdArrowForwardIos className="text-xs rotate-90 transform ${currentSubMenu === items.id ? 'rotate-180' : ''}" />}
+                  {items.arrowForward && <MdArrowForwardIos className={`text-xs ${currentSubMenu === items.id ? 'rotate-90' : ''}`} />}
                 </a>
                 {items.submenu && currentSubMenu === items.id && (
                   <ul className="ml-4 mt-2">
-                    {items.submenu.map((submenuItem, subIndex) =>(
+                    {items.submenu.map((submenuItem, subIndex) => (
                       <li key={subIndex} className="text-[16px] text-gray-300 py-1">
                         <a href={submenuItem.link}>
-                           {submenuItem.title}
+                          {submenuItem.title}
                         </a>
                       </li>
                     ))}
