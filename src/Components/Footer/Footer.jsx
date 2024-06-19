@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import FooterBanner from "./FooterBanner.jpg";
 import Logo from "../../assets/Logo.png";
 import { Link } from "react-router-dom";
+
+
 import {
   FaFacebook,
   FaInstagram,
@@ -98,25 +100,25 @@ const Footer = () => {
             <h1 className="text-white text-3xl font-bold  mt-4 mb-2">
               Quick Links
             </h1>
-            <Link>
+            <Link to={"/aboutus"}>
               <p className="text-white underline tracking-wide">About Us</p>
             </Link>
-            <Link>
+            <Link to={"/termsandcondition"}>
               <p className="text-white underline tracking-wide">
                 Terms & Conditions
               </p>
             </Link>
-            <Link>
+            <Link to={"/warrantyplicy"}>
               <p className="text-white underline tracking-wide">
                 Warranty policy
               </p>
             </Link>
-            <Link>
+            <Link to={"/shippingpolicy"}>
               <p className="text-white underline tracking-wide">
                 Shipping policy
               </p>
             </Link>
-            <Link>
+            <Link to={"/bluedartpolicy"}>
               <p className="text-white underline tracking-wide">
                 Bluedart Tracking
               </p>
@@ -124,25 +126,25 @@ const Footer = () => {
           </div>
           {/* FAQs Privacy Policy and others */}
           <div className="flex flex-col items-center gap-2 mt-10">
-            <Link>
+            <Link to={"/faqs"}>
               <p className="text-white underline tracking-wide">FAQs</p>
             </Link>
-            <Link>
+            <Link to={"/privacypolicy"}>
               <p className="text-white underline tracking-wide">
                 Privacy Policy
               </p>
             </Link>
-            <Link>
+            <Link to={"/replacementpolicy"}>
               <p className="text-white underline tracking-wide">
                 Replacement policy
               </p>
             </Link>
-            <Link>
+            <Link to={"/refund&cancellationpolicy"}>
               <p className="text-white underline tracking-wide">
                 Refund & Cancellation Policy
               </p>
             </Link>
-            <Link>
+            <Link to={"/ecomexpresstracking"}>
               <p className="text-white underline tracking-wide">
                 Ecom Express Tracking
               </p>

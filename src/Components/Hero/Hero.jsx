@@ -8,7 +8,7 @@ import Banner5 from "../../assets/Hero/Banner5.png";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Features from "./Features";
-import About from '../About/About';
+import About from './About/About';
 import ShopByPocket from '../../Collection/ShopByPocket/ShopByPocket';
 import ShopByBrand from '../../Collection/ShopByBrand/ShopByBrand';
 import Reviews from "./Reviews/Reviews";
