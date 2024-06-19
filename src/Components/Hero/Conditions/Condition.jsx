@@ -8,15 +8,15 @@ import { Mousewheel, Keyboard, Autoplay, Pagination } from 'swiper/modules';
 const Condition = () => {
   return (
     <div className="mt-20 mb-20 overflow-x-hidden">
-      <div className="container">
-        <div className="flex justify-center items-center gap-3 mb-10">
+      
+        <div className="flex justify-center items-center gap-8 mb-10">
           <img src={Star} alt="" className="w-8 h-8" />
           <h1 className="text-4xl sm:lg md:2xl text-center font-bold">Conditions</h1>
           <img src={Star} alt="" className="w-8 h-8" />
         </div>
-        <div className="hidden lg:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mx-10 space-x-4">
+        <div className="hidden lg:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mx-14 space-x-4">
           {ConditionData.map((data) => (
-            <div key={data.id} className="flex flex-col justify-center items-center shadow-md w-[300px] h-auto my-10 px-2 rounded-lg">
+            <div key={data.id} className="flex flex-col justify-center items-center shadow-lg shadow-gray-300 min-w-auto h-auto my-10 px-2 rounded-lg">
               <h1 className="text-3xl text-primary text-center mb-2 mt-4 font-bold">
                 {data.title}
               </h1>
@@ -24,7 +24,7 @@ const Condition = () => {
                 <h3 className="text-gray-600 text-[20px]">
                   {data.subTitle}
                 </h3>
-                <p className="text-gray-700 mb-3">
+                <p className="text-gray-700 mb-3 text-wrap">
                   {data.text}
                 </p>
               </div>
@@ -100,7 +100,7 @@ const Condition = () => {
             ))}
           </Swiper>
         </div>
-      </div>
+     
     </div>
   );
 }

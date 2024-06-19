@@ -3,6 +3,7 @@ import Logo from "../../assets/Logo.png";
 import NavLinks from './NavData';
 import { MdOutlineArrowDropDown, MdAccountBox, MdClose, MdArrowForwardIos } from "react-icons/md";
 import { FaSearch, FaShoppingBag, FaBars } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const BottomNav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,7 +12,7 @@ const BottomNav = () => {
   const navLinksRef = useRef(null);
 
   const toggleSubMenu = (event, submenuId) => {
-    event.preventDefault(); // Prevent the default anchor tag behavior
+    event.preventDefault(); 
     setCurrentSubMenu(currentSubMenu === submenuId ? null : submenuId);
   };
 
@@ -44,9 +45,11 @@ const BottomNav = () => {
           {isMenuOpen ? <MdClose /> : <FaBars />}
         </div>
         <img src={Logo} alt="Logo" className="h-12 w-12 rounded-full hidden md:block" />
+        <Link to={"/"}>
         <h1 className="font-bold text-2xl text-primary/100 hidden md:block">
           Mobile Hub
         </h1>
+        </Link>
       </div>
       <div className="flex justify-center flex-grow">
         <ul className="hidden md:flex items-center justify-around gap-4 text-sm lg:text-lg xl:text-xl" ref={navLinksRef}>
@@ -98,7 +101,7 @@ const BottomNav = () => {
         <div className="p-4">
           <div className="flex justify-between items-center">
             <img src={Logo} alt="Logo" className="h-8 w-8 rounded-full md:block" />
-            <h1 className="font-bold text-2xl">Mobile Hub</h1>
+            <Link to={"/"}><h1 className="font-bold text-2xl">Mobile Hub</h1></Link>
             <MdClose className="text-2xl cursor-pointer" onClick={() => setIsMenuOpen(false)} />
           </div>
           <ul className="mt-10">

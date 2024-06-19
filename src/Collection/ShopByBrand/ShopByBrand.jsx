@@ -43,7 +43,7 @@ const ShopByBrand = () => {
               <img
                 src={data.image}
                 alt={`brand-${data.id}`}
-                className="w-20 h-20 hover:scale-150 transition-all duration-200"
+                className="w-30 h-20 hover:scale-150 transition-all duration-200"
               />
             </div>
           </Link>
