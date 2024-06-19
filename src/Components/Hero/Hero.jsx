@@ -9,10 +9,10 @@ import Banner5 from "../../assets/Hero/Banner5.png";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Features from "./Features";
+import AboutComponent from "./About/About";
 import DatailsoftheDay from './DealsoftheDay'
 import BrandWarrenty from './Brand/BrandWarrenty'
 import AlwaysInDemands from './Demands/AlwaysDemands';
-import About from '../About/About';
 import ShopByPocket from '../../Collection/ShopByPocket/ShopByPocket';
 import ShopByBrand from '../../Collection/ShopByBrand/ShopByBrand';
 import SellingOutFast from './SellingOutFast/SellingOutFast';
@@ -62,7 +62,7 @@ const Hero = () => {
         <DatailsoftheDay />
         <BrandWarrenty />
         <AlwaysInDemands />
-        <About />
+        <AboutComponent />
         <ShopByPocket />
         <ShopByBrand />
         <SellingOutFast />
