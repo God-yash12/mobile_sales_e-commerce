@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import Slider from 'react-slick';
-import Card from './DealsCard';
+import Card from './SellingOutFastCard';
 
-
-const DealsoftheDay = () => {
+const SellingOutFast = () => {
   const [products] = useState([
     {
       id: 1,
@@ -109,7 +108,7 @@ const DealsoftheDay = () => {
     autoplay: true,
     autoplaySpeed: 2950,
     arrows: false,
-            
+
     responsive: [
       {
         breakpoint: 1024,
@@ -147,10 +146,10 @@ const DealsoftheDay = () => {
   };
 
   return (
-    <div className="max-w-9xl px-4 sm:px-6 lg:px-8 mt-16 mb-8">
+    <div className="max-w-9xl mx-auto px-4 sm:px-6 lg:px-8 mt-2 mb-8">
       <div className="flex justify-center items-center gap-3 mb-6 pb-4">
         <img src="/src/assets/star.png" alt="" className="w-8 h-8" />
-          <h2 className="text-3xl sm:lg md:2xl font-semibold text-center">Deals of the Day</h2>
+          <h2 className="text-3xl sm:lg md:2xl font-semibold text-center">Selling Out Fast</h2>
         <img src="/src/assets/star.png" alt="" className="w-8 h-8" />
       </div>
       <Slider {...settings}>
@@ -164,4 +163,4 @@ const DealsoftheDay = () => {
   );
 };
 
-export default DealsoftheDay;
+export default SellingOutFast;

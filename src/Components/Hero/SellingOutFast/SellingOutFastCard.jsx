@@ -1,9 +1,9 @@
 import React from 'react';
 import { FaHeart, FaEye } from 'react-icons/fa';
 
-const Card = ({ product }) => {
+const SellingFastCard = ({ product }) => {
   return (
-    <div className="bg-white rounded-lg shadow-md p-4 relative overflow-hidden group" style={{ height: '500px' }}>
+    <div className="bg-white rounded-lg shadow-md p-4 relative overflow-hidden group" style={{ height: '450px' }}>
       <div className="relative h-64 md:h-48 lg:h-64">
         <img src={product.image} alt={product.name} className="w-full h-full object-cover rounded-md transition-transform duration-300 group-hover:scale-110" />
         <div className="absolute top-0 right-0 flex flex-col space-y-2 p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -30,4 +30,4 @@ const Card = ({ product }) => {
   );
 };
 
-export default Card;
+export default SellingFastCard;
