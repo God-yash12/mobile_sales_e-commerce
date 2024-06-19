@@ -8,7 +8,7 @@ import { FaStar } from 'react-icons/fa';
 
 const Reviews = () => {
   return (
-    <div className="mt-4 mb-10">
+    <div className="mt-20 mb-10">
       <div className="container">
         {/* heading section */}
         <div className="flex justify-center items-center gap-3 mb-10">
