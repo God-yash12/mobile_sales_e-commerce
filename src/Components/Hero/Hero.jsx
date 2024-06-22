@@ -1,4 +1,5 @@
-import React from 'react';
+import React from 'react'
+import { Link } from 'react-router-dom'
 import Slider from "react-slick";
 import Banner1 from "../../assets/Hero/Banner1.png";
 import Banner2 from "../../assets/Hero/Banner2.png";
@@ -8,12 +9,17 @@ import Banner5 from "../../assets/Hero/Banner5.png";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Features from "./Features";
-import About from './About/About';
+import AboutComponent from "./About/About";
+import DatailsoftheDay from './DealsoftheDay'
+import BrandWarrenty from './Brand/BrandWarrenty'
+import AlwaysInDemands from './Demands/AlwaysDemands';
 import ShopByPocket from '../../Collection/ShopByPocket/ShopByPocket';
 import ShopByBrand from '../../Collection/ShopByBrand/ShopByBrand';
+import SellingOutFast from './SellingOutFast/SellingOutFast';
 import Reviews from "./Reviews/Reviews";
 import Condition from './Conditions/Condition';
 import FeatureOn from './FeatureOn/FeatureOn';
+import { DealsDetailsPage } from './DealsDetailsPage';
 
 const Hero = () => {
 
@@ -53,12 +59,17 @@ const Hero = () => {
         </Slider>
         </div>
         <Features />
-        <About />
+        <DatailsoftheDay />
+        <BrandWarrenty />
+        <AlwaysInDemands />
+        <AboutComponent />
         <ShopByPocket />
         <ShopByBrand />
+        <SellingOutFast />
         <Reviews />
         <Condition />
         <FeatureOn />
+        <DealsDetailsPage />
     </div>
   );
 };

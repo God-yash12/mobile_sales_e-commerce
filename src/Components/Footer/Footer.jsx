@@ -96,19 +96,19 @@ const Footer = () => {
             </div>
           </div>
           {/* Quick Links */}
-          <div className="flex flex-col items-center gap-2">
+          <div className="flex flex-col item-left gap-2 ml-24">
             <h1 className="text-white text-3xl font-bold  mt-4 mb-2">
               Quick Links
             </h1>
             <Link to={"/aboutus"}>
               <p className="text-white underline tracking-wide">About Us</p>
             </Link>
-            <Link to={"/termsandcondition"}>
+            <Link to={"/termsandconditions"}>
               <p className="text-white underline tracking-wide">
                 Terms & Conditions
               </p>
             </Link>
-            <Link to={"/warrantyplicy"}>
+            <Link to={"/warrantypolicy"}>
               <p className="text-white underline tracking-wide">
                 Warranty policy
               </p>
@@ -118,14 +118,14 @@ const Footer = () => {
                 Shipping policy
               </p>
             </Link>
-            <Link to={"/bluedartpolicy"}>
+            <Link to={"/bluedarttracking"}>
               <p className="text-white underline tracking-wide">
                 Bluedart Tracking
               </p>
             </Link>
           </div>
           {/* FAQs Privacy Policy and others */}
-          <div className="flex flex-col items-center gap-2 mt-10">
+          <div className="flex flex-col items-left gap-2 mt-16 ml-10">
             <Link to={"/faqs"}>
               <p className="text-white underline tracking-wide">FAQs</p>
             </Link>
@@ -232,7 +232,7 @@ const Footer = () => {
           {/* Quick Links */}
           <div className="mb-10">
             <h1
-              className="flex justify-between items-center gap-5 text-white text-2xl mt-4 ml-10"
+              className="flex justify-between items-center gap-5 text-white text-2xl mt-4 ml-10 mb-6"
               onClick={toggleQuickLink}
             >
               Links, FAQs and Policies
@@ -240,53 +240,53 @@ const Footer = () => {
             </h1>
             {showQuickLink && (
               <div className="ml-10 mt-2">
-                <Link>
+                <Link to={"/aboutus"}>
                   <p className="text-2xl text-white underline tracking-wide mb-2">
                     About Us
                   </p>
                 </Link>
-                <Link>
+                <Link to={"/termsandconditions"}>
                   <p className="text-2xl text-white underline tracking-wide mb-2">
                     Terms & Conditions
                   </p>
                 </Link>
-                <Link>
+                <Link to={"/warrantypolicy"}>
                   <p className="text-2xl text-white underline tracking-wide mb-2">
                     Warranty policy
                   </p>
                 </Link>
-                <Link>
+                <Link to={"/shippingpolicy"}>
                   <p className="text-2xl text-white underline tracking-wide mb-2">
                     Shipping policy
                   </p>
                 </Link>
-                <Link>
+                <Link to={"/bluedarttracking"}>
                   <p className="text-2xl text-white underline tracking-wide mb-5">
                     Bluedart Tracking
                   </p>
                 </Link>
                 {/* FAQs and Policies */}
-                <Link>
+                <Link to={"/FAQs"}>
                   <p className="text-2xl text-white underline tracking-wide mb-2">
                     FAQs
                   </p>
                 </Link>
-                <Link>
+                <Link to={"/privacypolicy"}>
                   <p className="text-2xl text-white underline tracking-wide mb-2">
                     Privacy Policy
                   </p>
                 </Link>
-                <Link>
+                <Link to={"/replacementpolicy"}>
                   <p className="text-2xl text-white underline tracking-wide mb-2">
                     Replacement policy
                   </p>
                 </Link>
-                <Link>
+                <Link to={"/refund&cancellationpolicy"}>
                   <p className="text-2xl text-white underline tracking-wide mb-2">
                     Refund & Cancellation Policy
                   </p>
                 </Link>
-                <Link>
+                <Link to={"/ecomexpresstracking"}>
                   <p className="text-2xl text-white underline tracking-wide mb-10">
                     Ecom Express Tracking
                   </p>
