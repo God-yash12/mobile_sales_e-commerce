@@ -3,6 +3,7 @@ import Logo from "../../assets/Logo.png";
 import NavLinks from './NavData';
 import { MdOutlineArrowDropDown, MdAccountBox, MdClose, MdArrowForwardIos } from "react-icons/md";
 import { FaSearch, FaShoppingBag, FaBars } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const BottomNav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -40,16 +41,16 @@ const BottomNav = () => {
     <div className="relative flex justify-between items-center bg-gray-100 p-4">
       {/* Logo section */}
       <div className="flex items-center ml-5 gap-4 h-6">
-        <div className="text-primary text-2xl md:hidden cursor-pointer" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+        <div className="text-primary text-2xl lg:hidden cursor-pointer" onClick={() => setIsMenuOpen(!isMenuOpen)}>
           {isMenuOpen ? <MdClose /> : <FaBars />}
         </div>
-        <img src={Logo} alt="Logo" className="h-12 w-12 rounded-full hidden md:block" />
-        <h1 className="font-bold text-2xl text-primary/100 hidden md:block">
+        <Link to={"/"}><img src={Logo} alt="Logo" className="h-12 w-12 rounded-full hidden lg:block" /></Link>
+        <Link to={"/"}><h1 className="font-bold text-2xl text-primary/100 hidden lg:block">
           Mobile Hub
-        </h1>
+        </h1></Link>
       </div>
       <div className="flex justify-center flex-grow">
-        <ul className="hidden md:flex items-center justify-around gap-4 text-sm lg:text-lg xl:text-xl" ref={navLinksRef}>
+        <ul className="hidden lg:flex items-center justify-around gap-4 text-sm lg:text-lg xl:text-xl" ref={navLinksRef}>
           {NavLinks.map((items, index) => (
             <li
               key={index}
@@ -82,25 +83,25 @@ const BottomNav = () => {
           <FaSearch className="text-primary text-2xl" />
           <span className="absolute top-full mt-2 left-1/2 transform -translate-x-1/2 w-max p-1 text-xs z-[9999] bg-primary text-white rounded-md opacity-0 group-hover:opacity-100 transition-opacity">Search</span>
         </div>
-        <div className="relative group hidden md:block">
+        <div className="relative group hidden lg:block">
           <a href="./login">
           <MdAccountBox className="text-primary text-2xl" />
           <span className="absolute top-full mt-2 left-1/2 transform -translate-x-1/2 w-max p-1 text-xs z-[9999] bg-primary text-white rounded-md opacity-0 group-hover:opacity-100 transition-opacity">Account</span>
           </a>
         </div>
         <div className="relative group">
-          <FaShoppingBag className="text-primary text-2xl" />
+          <FaShoppingBag className="text-primary text-2xl mr-10" />
           <span className="absolute top-full mt-2 left-1/2 transform -translate-x-1/2 w-max p-1 text-xs z-[9999] bg-primary text-white rounded-md opacity-0 group-hover:opacity-100 transition-opacity">Cart</span>
         </div>
       </div>
       {/* Side Navbar */}
-      <div className={`fixed top-0 left-0 w-64 h-full bg-gray-800 text-white z-[9999] transform ${isMenuOpen ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-300 ease-in-out`} ref={sidebarRef}>
+      <div className={`fixed top-0 left-0 w-64 md:w-80 h-full bg-gray-800 text-white z-[9999] transform ${isMenuOpen ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-300 ease-in-out`} ref={sidebarRef}>
         <div className="p-4">
-          <div className="flex justify-between items-center">
+          <Link to={"/"}><div className="flex justify-between items-center">
             <img src={Logo} alt="Logo" className="h-8 w-8 rounded-full md:block" />
             <h1 className="font-bold text-2xl">Mobile Hub</h1>
             <MdClose className="text-2xl cursor-pointer" onClick={() => setIsMenuOpen(false)} />
-          </div>
+          </div></Link>
           <ul className="mt-10">
             {NavLinks.map((items, index) => (
               <li key={index} className="text-[18px] text-white py-2 border-b border-gray-700">
@@ -124,7 +125,7 @@ const BottomNav = () => {
           </ul>
         </div>
         {/* Account section */}
-        <div className="md:hidden mt-[200px]">
+        <div className="lg:hidden mt-[200px]">
           <p className="text-white text-center mb-4">
             My Account 
           </p>
