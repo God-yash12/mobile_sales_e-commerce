@@ -14,14 +14,27 @@ import Register from './Components/Auth/Register';
 import ForgotPassword from './Components/Auth/ForgotPawwsord';
 import Footer from './Components/Footer/Footer'
 // import ProductDetails from './Components/Hero/Deals/DealsDetailsPage'
+import Footer from './Components/Footer/Footer';
+import AboutUs from './Pages/AboutUs/AboutUs';
+import ScrollToTop from './Components/scrollToTop/ScrollToTop';
+import ShippingPolicy from "./Pages/Shipping Policy/ShoppingPolicy";
+import TermsAndConditions from "./Pages/TermsAndConditions/TermsAndConditions";
+import WarrantyPolicy from './Pages/Warranty Policy/WarrantyPolicy';
+import BluedartTracking from "./Pages/Bluedart Teacking/BluedartTracking";
+import FAQs from './Pages/FAQs/FAQs';
+import PrivacyPolicy from './Pages/Privacy policy/PrivacyPolicy';
+import ReplacementPolicy from './Pages/Replacemnet policy/ReplacementPolicy';
+import RefundAndCancellation from './Pages/Refund/Refund&Cancellation';
+import EcomExpressTracking from './Pages/EcomExpressTracking/EcomExpressTracking';
 
 
 const App = () => {
   return (
     <Router>
+      <ScrollToTop/>
       <Navbar />
       <Routes>
-      <Route path="/" element={<Hero />} />
+      <Route path="/" exact element={<Hero />} />
       <Route path="/unboxPhones" element={<UnboxPhones />} />
       <Route path="/refurbishedPhones" element={<RefurbishPhones />} />
       <Route path="/SPLCategory" element={<SPLCategory />} />
@@ -32,6 +45,16 @@ const App = () => {
       <Route path="/register" element={<Register />} />
       <Route path="/forgotPassword" element={<ForgotPassword />} />
       {/* <Route path="/dealsDetailsPage/:id" element={<ProductDetails />} /> */}
+      <Route path="/aboutus" element={<AboutUs />} />
+      <Route path="/termsandconditions" element={<TermsAndConditions />} />
+      <Route path="/shippingpolicy" element={<ShippingPolicy />} />
+      <Route path="/warrantypolicy" element={<WarrantyPolicy />} />
+      <Route path="/bluedarttracking" element={<BluedartTracking />} />
+      <Route path="/FAQs" element={<FAQs />} />
+      <Route path="/privacyPolicy" element={<PrivacyPolicy />} />
+      <Route path="/replacementpolicy" element={<ReplacementPolicy />} />
+      <Route path="/refund&cancellationpolicy" element={<RefundAndCancellation />} />
+      <Route path="/ecomexpresstracking" element={<EcomExpressTracking />} />
       </Routes>
       <Footer />
     </Router>
