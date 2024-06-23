@@ -1,16 +1,34 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FaHeart, FaEye } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 
 const DemandsCard = ({ product }) => {
+  const [isFavorite, setIsFavorite] = useState(false);
+  const navigate = useNavigate();
+
+  const handleHeartClick = () => {
+    setIsFavorite(!isFavorite);
+  };
+
+  const handleEyeClick = () => {
+    navigate(`/demandsDetailsPage/${product.id}`);
+  };
+
   return (
     <div className="bg-white rounded-lg shadow-md p-4 relative overflow-hidden group" style={{ height: '450px' }}>
       <div className="relative h-64 md:h-48 lg:h-64">
         <img src={product.image} alt={product.name} className="w-full h-full object-cover rounded-md transition-transform duration-300 group-hover:scale-110" />
-        <div className="absolute top-0 right-0 flex flex-col space-y-2 p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          <button className="text-white p-2 rounded-full bg-gray-800 bg-opacity-75 hover:bg-gray-600 transition-colors duration-300">
-            <FaHeart />
+        <div className="absolute top-0 right-0 flex flex-col space-y-2 p-2 opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <button 
+            className="text-white p-2 rounded-full bg-gray-800 bg-opacity-75 hover:bg-gray-600 transition-colors duration-300"
+            onClick={handleHeartClick}
+          >
+            <FaHeart color={isFavorite ? 'red' : 'white'} />
           </button>
-          <button className="text-white p-2 rounded-full bg-gray-800 bg-opacity-75 hover:bg-gray-600 transition-colors duration-300">
+          <button 
+            className="text-white p-2 rounded-full bg-gray-800 bg-opacity-75 hover:bg-gray-600 transition-colors duration-300"
+            onClick={handleEyeClick}
+          >
             <FaEye />
           </button>
         </div>

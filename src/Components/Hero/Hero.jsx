@@ -9,7 +9,7 @@ import Banner5 from "../../assets/Hero/Banner5.png";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Features from "./Features";
-import DatailsoftheDay from './DealsoftheDay'
+import DatailsoftheDay from './Deals/DealsoftheDay'
 import BrandWarrenty from './Brand/BrandWarrenty'
 import AlwaysInDemands from './Demands/AlwaysDemands';
 import About from '../About/About';
@@ -19,7 +19,6 @@ import SellingOutFast from './SellingOutFast/SellingOutFast';
 import Reviews from "./Reviews/Reviews";
 import Condition from './Conditions/Condition';
 import FeatureOn from './FeatureOn/FeatureOn';
-import { DealsDetailsPage } from './DealsDetailsPage';
 
 const Hero = () => {
 
@@ -69,7 +68,7 @@ const Hero = () => {
         <Reviews />
         <Condition />
         <FeatureOn />
-        <DealsDetailsPage />
+        
     </div>
   );
 };

@@ -13,7 +13,7 @@ import Login from './Components/Auth/Login';
 import Register from './Components/Auth/Register';
 import ForgotPassword from './Components/Auth/ForgotPawwsord';
 import Footer from './Components/Footer/Footer'
-
+// import ProductDetails from './Components/Hero/Deals/DealsDetailsPage'
 
 
 const App = () => {
@@ -31,6 +31,7 @@ const App = () => {
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
       <Route path="/forgotPassword" element={<ForgotPassword />} />
+      {/* <Route path="/dealsDetailsPage/:id" element={<ProductDetails />} /> */}
       </Routes>
       <Footer />
     </Router>
