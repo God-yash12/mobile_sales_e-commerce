@@ -1,4 +1,6 @@
 const NavLinks = [
+
+  
     {
       id: 1,
       title: "Unbox Phones",

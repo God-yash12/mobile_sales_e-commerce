@@ -113,11 +113,8 @@ const Footer = () => {
                 <Link to={"/shippingpolicy"}><p className="underline tracking-wide text-white block mb-2">
                   Shipping policy
                 </p></Link>
-                <Link to={"/bluedarttracking"}>
-                <p className="underline tracking-wide text-white block mb-2">
-                  Bluedart Tracking
-                </p>
-                </Link>
+                
+                
               </div>
             </div>
           </div>
@@ -153,11 +150,7 @@ const Footer = () => {
                   Refund & Cancellation Policy
                 </p>
                </Link>
-              <Link to={"/ecomexpresstracking"}>
-              <p className="underline tracking-wide text-white block mb-2">
-                  Ecom Express Tracking
-                </p>
-              </Link>
+              
               </div>
             </div>
           </div>

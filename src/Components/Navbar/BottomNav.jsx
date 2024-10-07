@@ -51,9 +51,9 @@ const BottomNav = () => {
       </div>
       <div className="flex justify-center flex-grow">
         <ul className="hidden lg:flex items-center justify-around gap-4 text-sm lg:text-lg xl:text-xl" ref={navLinksRef}>
-          {NavLinks.map((items, index) => (
+          {NavLinks.map((items) => (
             <li
-              key={index}
+              key={items.id}
               className="relative text-blue-700 group"
               onMouseEnter={() => handleMouseEnter(items.id)}
               onMouseLeave={handleMouseLeave}
@@ -78,7 +78,7 @@ const BottomNav = () => {
           ))}
         </ul>
       </div>
-      <div className="flex items-center gap-7 ml-4 md:mr-2 cursor-pointer">
+      <div className="flex items-center gap-7 ml-4 cursor-pointer">
         <div className="relative group">
           <FaSearch className="text-primary text-2xl" />
           <span className="absolute top-full mt-2 left-1/2 transform -translate-x-1/2 w-max p-1 text-xs z-[9999] bg-primary text-white rounded-md opacity-0 group-hover:opacity-100 transition-opacity">Search</span>
@@ -90,7 +90,7 @@ const BottomNav = () => {
           </a>
         </div>
         <div className="relative group">
-          <FaShoppingBag className="text-primary text-2xl mr-10" />
+          <FaShoppingBag className="text-primary text-2xl mr-5" />
           <span className="absolute top-full mt-2 left-1/2 transform -translate-x-1/2 w-max p-1 text-xs z-[9999] bg-primary text-white rounded-md opacity-0 group-hover:opacity-100 transition-opacity">Cart</span>
         </div>
       </div>

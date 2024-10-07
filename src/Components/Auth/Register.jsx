@@ -1,5 +1,6 @@
 
 import React from 'react';
+import GoogleIcon from "./googleIcon.png";
 
 const Register = () => {
   return (
@@ -51,11 +52,24 @@ const Register = () => {
             </div>
             <div className="flex items-center justify-between w-3/4">
               <button
-                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full"
+                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 cursor-pointer rounded focus:outline-none focus:shadow-outline w-full"
                 type="button"
               >
                 Register
               </button>
+            </div>
+            
+            {/* continue with google  */}
+            <div className="flex items-center justify-center cursor-pointer bg-blue-500 hover:bg-blue-700 w-3/4 mt-5 rounded focus:outline-none focus:shadow-outline">
+              <button
+                className= "text-white font-bold py-2 px-4 "
+                type="button"
+              >
+                Continue with Google
+              </button>
+              <div className="relative">
+                <img src={GoogleIcon} alt="Icon" className="w-7 h-7 bg-white rounded-full " />
+              </div>
             </div>
             <div className='flex items-center justify-between mt-4 w-3/4'>
               <div className="text-center w-full">

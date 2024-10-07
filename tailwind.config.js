@@ -11,17 +11,13 @@ export default {
         primary: "#3f0af0",
         secondary: "#210c47",
       },
-      fontFamily:{
-        'sans': ['Roboto', 'sans-serif'],
+      fontFamily: {
+        poppins: ['Poppins', 'sans-serif', 'Roborto'],
       },
       container:{
         center: true,
-        padding: {
-          DEFAULT: "1rem",
-          sm: "3rem",
-          // lg: "4rem",
-          // xl: "5rem", 
-        },
+        padding: "0",
+       
       }
     },
   },

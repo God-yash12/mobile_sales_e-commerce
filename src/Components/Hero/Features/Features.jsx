@@ -1,10 +1,10 @@
 import React from 'react';
-import Feature1 from '../../assets/Hero/feature1.png';
-import Feature2 from '../../assets/Hero/feature2.png';
-import Feature3 from '../../assets/Hero/feature3.png';
-import Feature4 from '../../assets/Hero/feature4.png';
-import Feature5 from '../../assets/Hero/feature5.png';
-import Feature6 from '../../assets/Hero/Feature6.png';
+import Feature1 from '../../../assets/Hero/feature1.png';
+import Feature2 from '../../../assets/Hero/feature2.png';
+import Feature3 from '../../../assets/Hero/feature3.png';
+import Feature4 from '../../../assets/Hero/feature4.png';
+import Feature5 from '../../../assets/Hero/feature5.png';
+import Feature6 from '../../../assets/Hero/Feature6.png';
 
 const data = [
     {

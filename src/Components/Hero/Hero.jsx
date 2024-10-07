@@ -1,5 +1,4 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react';
 import Slider from "react-slick";
 import Banner1 from "../../assets/Hero/Banner1.png";
 import Banner2 from "../../assets/Hero/Banner2.png";
@@ -8,7 +7,7 @@ import Banner4 from "../../assets/Hero/Banner4.png";
 import Banner5 from "../../assets/Hero/Banner5.png";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Features from "./Features";
+import Features from "./Features/Features";
 import AboutComponent from "./About/About";
 import DatailsoftheDay from './DealsoftheDay'
 import BrandWarrenty from './Brand/BrandWarrenty'
